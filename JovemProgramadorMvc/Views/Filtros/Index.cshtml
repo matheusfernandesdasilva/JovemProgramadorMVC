@@ -1,0 +1,40 @@
+﻿@model AlunoModel
+<form asp-controller="Aluno" asp-action="Index" method="post" class="mb-3">
+    <div class="mb-3">
+        <label for="Idade" class="col-form-label">Digite a Idade</label>
+        <div class="d-flex">
+            <input type="text" asp-for="Idade" class="form-control col-1 mr-3">
+            <select class="form-select" asp-for="Operacao">
+                <option selected>Selecione</option>
+                <option value=">">Idade Maior</option>
+                <option value="<">Idade Menor</option>
+                <option value="=">Idade Igual à</option>
+            </select>
+        </div>
+    </div>
+    <div class="text-left">
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+    </div>
+</form>
+
+<form asp-controller="Aluno" asp-action="Index" method="post" class="mb-3">
+    <div class="mb-3">
+        <label for="Nome" class="col-form-label">Digite o Nome</label>
+        <p><input type="text" asp-for="Nome" class="form-control col-1" id="InputFiltroNome"></p>
+    </div>
+    <div class="text-left">
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+    </div>
+</form>
+
+<form asp-controller="Aluno" asp-action="Index" method="post">
+    <div class="mb-3">
+        <label for="Contato" class="col-form-label">Digite o Contato</label>
+        <p><input type="text" asp-for="Contato" class="form-control col-1" id="InputFiltroContato"></p>
+    </div>
+    <div class="text-left">
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+    </div>
+</form>
+
+    
